@@ -1,0 +1,5 @@
+{
+    "board": "arduino:avr:uno",
+    "port": "COM4",
+    "sketch": "arduino_controller\\aws_mqtt_arduino_uno\\aws_mqtt_arduino_uno.ino"
+}

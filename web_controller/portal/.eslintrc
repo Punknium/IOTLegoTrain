@@ -1,0 +1,72 @@
+{
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "ecmaVersion": 2017,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "security",
+    "vue"
+  ],
+  "env": { "browser": true },
+  "extends": ["airbnb", "plugin:vue/recommended", "plugin:security/recommended"],
+  "rules": {
+    "semi": "off",
+    "no-extra-semi": "warn",
+    "no-underscore-dangle": "off",
+    "complexity": ["warn", 5],
+    "consistent-this": ["error", "self"],
+    "valid-jsdoc": "error",
+    "func-names": ["error", "as-needed"],
+    "newline-per-chained-call": "error",
+    "object-curly-newline": ["warn", {"multiline": true}],
+    "class-methods-use-this": "off",
+    "no-await-in-loop": "off",
+    "semi-style": ["error", "first"],
+    "linebreak-style": ["error", "unix"],
+    "max-depth": "warn",
+    "max-lines": "warn",
+    "max-statements": ["warn", 32, {"ignoreTopLevelFunctions": false}],
+    "max-len": ["warn", {"code": 120}],
+    "max-statements-per-line": ["warn", {"max":2}],
+    "max-nested-callbacks": ["warn", 3],
+    "no-multi-assign": "error",
+    "no-undef": "off",
+    "no-plusplus": "off",
+    "prefer-destructuring": "warn",
+    "import/prefer-default-export": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": "warn",
+    "import/no-named-as-default-members": "off",
+    "import/no-named-as-default": "off",
+    "vue/html-self-closing": "off",
+    "vue/max-attributes-per-line": ["error", {
+      "singleline": 5,
+      "multiline": {
+        "max": 1,
+        "allowFirstLine": false
+      }
+    }],
+    "require-jsdoc": ["off", {
+      "require": {
+        "FunctionDeclaration": true,
+        "MethodDefinition": true,
+        "ClassDeclaration": false,
+        "ArrowFunctionExpression": false,
+        "FunctionExpression": false
+      }
+    }],
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "LabeledStatement",
+        "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+      },
+      {
+        "selector": "WithStatement",
+        "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+      }
+    ]
+  }
+}
